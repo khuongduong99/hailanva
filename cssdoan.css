@@ -1,0 +1,426 @@
+.head{
+    background-color: rgb(142, 40, 40);
+    width: 100%;
+    height: 60px;
+}
+.qc{
+    height: 425px;
+    float: left;
+    width: 100%;
+}
+.anhqc{}
+.container-fluid
+{
+    background-color:rgb(142, 40, 40) ;
+}
+
+
+.anhqc:hover
+{    transform: translate(0px,-20px);
+
+}
+.lala{
+        width: 100%;
+        height: 40px;
+        background-color: rgb(142, 40, 40);
+    }
+    .nav li {
+        color: rgb(255, 255, 255);
+        padding: 0px;
+        position: relative;
+        margin-left:50px; 
+        height: 50px;
+        font-size: 20px;
+        font-weight: 400;
+        width: 115px;
+        text-align: center;
+    }
+    .nav li:hover {
+        color: yellow;
+        margin-top: -5px;
+    }
+    .lalam{
+        display: none;
+    }
+    .navm{
+        display: none;
+    }
+    .gach{
+        width: 100%;
+        height: 5px;
+        background-color: rgb(142, 40, 40);
+    }
+    .giua{
+        width: 79.3%;
+        height: 1075px;
+        margin-left: 10%;
+        float: left;
+    }
+    .loai{
+    
+        width: 100%;
+        height: 45px;
+        background-color: rgb(255, 255, 255);
+        
+    }
+    .khuyenmai{
+        width: 100%;
+        height: 310px;
+        background-color: rgb(255, 255, 255);
+        justify-content: space-around;
+        display: flex;
+        position: static;
+    }
+    #ten{
+        padding: 5px;
+        font-size: 25px;
+        color: rgb(142, 40, 40);
+        margin-left: 7px;
+        font-weight: 700;
+    }
+    .o1 {
+        background-color: rgb(255, 255, 255);
+        float: left;
+        width: 250px;
+        height: 280px;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 15px;
+        box-shadow: -4px 1px 1px 2px rgba(146, 146, 146, 0.426);
+        border: 1px solid rgba(128, 128, 128, 0.46);
+    }
+    .sanpham {
+        margin-top: 10px;
+        width: 226px;
+        height: 190px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .sanpham:hover{
+        transform: translate(0px,-10px);
+    }
+    .thongtin {
+        width: 250px;
+        height: auto;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+        color: rgb(117, 50, 50);
+    } 
+    .gia{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    #anhchinh{
+        width: 450px;
+        height: 450px;
+        margin-top:50px;
+        margin-left:80px;
+        float: left;
+    }
+    .thongtinanhchinh{
+        width: 500px;
+        height: 410px;
+        margin-top:90px;
+        margin-left:30px;
+        float: left;
+        background-color: rgb(255, 255, 255);
+    }
+    .themvaogiohang{
+        float: left;
+        margin-top: 40px;
+        width: 170px;
+    }
+    .chugiohang {
+        border: 1px solid black;
+        padding: 15px;
+        border-radius: 20px;
+        margin-top: 20px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    .footer{
+        width: 100%;
+        height: 200px;
+        background-color: rgb(118, 31, 31);
+        float: left;
+    }
+    .poster{
+        width: 100%;
+        height: 350px;
+    }
+    .tieude{
+        width: 600px;
+        height: 250px;
+        margin-left: 150px;
+    }
+    .tieude1{
+        width: 600px;
+        height: 250px;
+        margin-left: 100px;
+        float: left;
+        margin-top: -30px;
+    }
+    #chu{
+        color: aliceblue;
+        font-size: 60px;
+        font-weight: 700;
+        font-style: italic;
+    }
+    #chu:hover{
+        color: yellow;
+    }
+    .chunho
+    {
+        font-size: 22px;
+        font-weight: 600;
+        font-style: italic;
+    }
+    .khung{
+        width: 79.3%;
+        height: 575px;
+        margin-left: 10%;
+        background-color: rgb(255, 255, 255);
+        margin-top: 15px;box-shadow: -4px 1px 1px 2px rgba(146, 146, 146, 0.426);
+        border: 1px solid rgba(128, 128, 128, 0.46);
+    }
+    #size{
+        font-size: 20px;
+        font-weight: 500;
+        margin-left: 0px;
+        float: left;
+    }
+    #g{
+        font-size: 25px;
+        font-weight: 500;
+        margin-left: 0px;
+        float: left;
+    }
+    #kt
+    {
+        font-size: 21px;
+        align-items: center;
+        justify-content: space-evenly;
+        display: flex;
+        font-weight: 500;
+        color: black;
+    }
+    #kt:hover{
+        font-size: 26px;
+        color: red;
+    }
+    @media (max-width:500px)
+    {
+        .head{
+            background-color: rgb(142, 40, 40);
+            width: 100%;
+            height: 40px;
+        }
+        .lala{
+            display: none;
+        }
+        .nav{
+            display:inline-block;
+        }
+        .lalam{
+            width: 100%;
+            height: 30px;
+            background-color:  rgb(142, 40, 40);
+        }
+        .lalam{
+            display:inline-block;
+        }
+        .navm li {
+            color: rgb(255, 255, 255);
+            padding: 0px;
+            position: relative;
+            margin-left:7px; 
+            height: 50px;
+            font-size: 8px;
+            font-weight: 500;
+            width:auto;
+            text-align: center;
+        }
+        .navm li{
+            display: inline-block;
+        }
+        .navm{
+            display: block;
+        }
+        .navm li:hover {
+            color: yellow;
+            width: 50px;
+        }
+        .qc{
+            display: none;
+        }
+        .anhqc{
+            display: none;
+        }
+        
+        .gach{
+            display: none;
+        }
+        .giua
+        {
+        width: 100%;
+        height: 500px;
+        background-color: rgb(255, 255, 255);
+        margin-left: 0%;
+        }
+        .loai
+        {
+            float: left;
+            margin-top: 10px;
+            width: 100%;
+            height: 10px;
+            background-color: rgb(253, 251, 251);
+            
+        }
+        .khuyenmai{
+            float: left;
+            position: static;
+            width: 100%;
+            height: 140px;
+            background-color: rgb(255, 255, 255);
+            margin-top: 5px;
+        }
+        #ten{
+            float: left;
+            padding: 0px;
+            font-size: 10px;
+            color: rgb(142, 40, 40);
+            margin-left: 0px;
+            font-weight: 700;
+        
+        }
+        .o1 {
+            background-color: rgb(255, 255, 255);
+            float: left;
+            width: 80px;
+            height: 120px;
+            text-align: center;
+            margin-top: 10px;
+            
+            border-radius: 10px;
+            border: 1px solid rgba(128, 128, 128, 0.46);
+            
+        }
+        .sanpham {
+            float: left;
+            margin-top: 10px;
+            width: 80px;
+            height: 80px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .thongtin {
+            float: left;
+            width: 80px;
+            height: auto;
+            font-size: 8px;
+            text-align: center;
+            font-weight: 400;
+            color: rgb(117, 50, 50);
+        } 
+        .gia{
+           
+            font-size: 8px;
+            font-weight: 400;
+            text-align: center;
+        }
+        .footer{
+            width: 100%;
+            height: 100px;
+            background-color: rgb(118, 31, 31);
+            float: left;
+        }
+        .poster{
+            width: 100%;
+            height: 200px;
+        }
+        .tieude{
+            margin-top: -50px;
+            width: 80%;
+            height: 150px;
+            margin-left: 20px;
+     
+        }
+        .tieude1{
+            width: 80%;
+        height: 150px;
+        margin-left: 20px;
+        float: left;
+        margin-top: -10px;
+        }
+        #chu{
+            color: aliceblue;
+            font-size: 30px;
+            font-weight: 500;
+            font-style: italic;
+            margin-top: 20px;
+        }
+        .chunho
+        {
+            font-size: 13px;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        #anhchinh{
+            margin-top: 0px;
+            width: auto;
+            height: 200px;
+            justify-content: space-around;
+            display: flex;
+            position: static;
+        }
+        .khung{
+            margin-left: 0px;
+            width: 100%;
+            height:100%;
+            margin-top: 5px;
+        }
+        .thongtinanhchinh{
+            width:100%;
+            height:100%;
+            margin-top:0px;
+            margin-left:0px;
+            float: left;
+            padding: 8px;
+            background-color: rgb(255, 255, 255);
+        }
+        #size{
+            width: 100%;
+            font-size: 20px;
+            font-weight: 500;
+            margin-left: 0px;
+            float: left;
+        }
+        #g{ 
+            margin-top: 15px;
+            width: 100%;
+            font-size: 20px;
+            font-weight: 500;
+            margin-left: 0px;
+            float: left;
+        }
+        .themvaogiohang{
+            margin-top: 40px;
+            width: auto;
+        }
+        .chugiohang {
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 20px;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            margin-left: 30px;
+            width: auto;
+        }
+    }

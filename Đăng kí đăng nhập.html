@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="cssdoan.css">
+    <title>Đăng nhập</title>
+</head>
+<style>
+.container {
+    margin-top: 15px;
+    position: relative;
+    width: 70vw;
+    height: 85vh;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg,  rgba(142, 40, 40, 0.836),rgb(142, 40, 40));
+    z-index: 6;
+    transform: translateX(100%);
+    transition: 1s ease-in-out;
+}
+
+.signin-signup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 5;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    min-width: 238px;
+    padding: 0 10px;
+}
+
+form.sign-in-form {
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    transition-delay: 1s;
+}
+
+form.sign-up-form {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    transition-delay: 1s;
+}
+
+.title {
+    font-size: 40px;
+    color: rgb(142, 40, 40);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.input-field {
+    width: 100%;
+    height: 50px;
+    background: #f0f0f0;
+    margin: 10px 0;
+    border: 2px solid  rgb(142, 40, 40);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.input-field i {
+    flex: 1;
+    text-align: center;
+    color: #e20c0c;
+    font-size: 18px;
+}
+
+.input-field input {
+    flex: 5;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(113, 32, 32);
+    font-weight: 500;
+}
+
+
+.btn:hover {
+    background: rgb(142, 40, 40);
+    color: #f0f0f0;
+}
+
+
+.social-icon:hover {
+    color: rgba(142, 40, 40, 0.812);
+    border-color: rgb(142, 40, 40);
+}
+
+.panels-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 35%;
+    min-width: 238px;
+    padding: 0 10px;
+    text-align: center;
+    z-index: 6;
+}
+
+.left-panel {
+    pointer-events: none;
+}
+
+
+.panel h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #f0f0f0;
+}
+
+.panel p {
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+.image {
+    width: 100%;
+    transition: 1.1s ease-in-out;
+    transition-delay: 0.4s;
+}
+
+.left-panel .image,
+.left-panel .content {
+    transform: translateX(-200%);
+}
+
+.right-panel .image,
+.right-panel .content {
+    transform: translateX(0);
+}
+
+.social-text {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+
+/*Animation*/
+
+.container.sign-up-mode::before {
+    transform: translateX(0);
+}
+
+.container.sign-up-mode .right-panel .image,
+.container.sign-up-mode .right-panel .content {
+    transform: translateX(200%);
+}
+
+.container.sign-up-mode .left-panel .image,
+.container.sign-up-mode .left-panel .content {
+    transform: translateX(0);
+}
+
+.container.sign-up-mode form.sign-in-form {
+    opacity: 0;
+}
+
+.container.sign-up-mode form.sign-up-form {
+    opacity: 1;
+}
+
+.container.sign-up-mode .right-panel {
+    pointer-events: none;
+}
+
+.container.sign-up-mode .left-panel {
+    pointer-events: all;
+}
+
+
+/*Responsive*/
+
+@media (max-width:779px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width:635px) {
+    .container::before {
+        display: none;
+    }
+    form {
+        width: 80%;
+    }
+    form.sign-up-form {
+        display: none;
+    }
+    .container.sign-up-mode2 form.sign-up-form {
+        display: flex;
+        opacity: 1;
+    }
+    .container.sign-up-mode2 form.sign-in-form {
+        display: none;
+    }
+    .panels-container {
+        display: none;
+    }
+    .account-text {
+        display: initial;
+        margin-top: 30px;
+    }
+    .trangchu
+    {
+        display: none;
+    }
+}
+</style>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <div class="head">
+        <nav  class="navbar navbar-expand-lg bg-body-danger">
+            <div  class="container-fluid">
+              <a style="color: #f0f0f0;" class="navbar-brand" href="index.html";>HAILAN</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a style="color: white;"  class="nav-link active" aria-current="page" href="https://www.highlandscoffee.com.vn/en/green-tea-freeze.html">Tải ứng dụng</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a style="color: white;"  class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Kết nối
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="https://www.facebook.com/profile.php?id=100008303809251">Facebook</a></li>
+                      <li><a class="dropdown-item" href="https://www.facebook.com/profile.php?id=100008303809251">Zalo</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="https://www.highlandscoffee.com.vn/en/green-tea-freeze.html">Khác</a></li>
+                    </ul>
+                  </li>
+                  
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                  <button style="color: white;border: solid white;" class="btn btn-outline-success" type="submit"><a href="1 san pham.html">Tìm</a> </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <div class="lala">
+            <ul class="nav">
+                <a href="Thực đơn.html"><li style="margin-left:370px;">THỰC ĐƠN</li></a>
+                <a href="giới thiệu.html"><li>GIỚI THIỆU</li></a>
+                <a href="Đăng kí đăng nhập.html"><li style="color: yellow;">ĐĂNG NHẬP</li></a>
+                <a href="giỏ hàng.html"><li>GIỎ HÀNG</li></a>
+            </ul>
+    </div>
+    <div class="lalam">
+        <ul class="navm">
+            <a href="Thực đơn.html"><li style="margin-left:15px;">THỰC ĐƠN</li></a>
+            <a href="giới thiệu.html"><li>GIỚI THIỆU</li></a>
+            <a href="Đăng kí đăng nhập.html"><li style="color: yellow;">ĐĂNG NHẬP</li></a>
+            <a href="giỏ hàng.html"><li>GIỎ HÀNG</li></a>
+        </ul>
+    </div>
+    <div class="container">          
+        <div class="signin-signup">
+            <form style="flex-direction: column;" action="" class="sign-in-form">    
+                <h2 class="title">Đăng nhập</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Nhập tài khoản">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Nhập mật khẩu">
+                </div>
+                <input style="border: 2px solid rgb(142, 40, 40);" type="submit" value="Đăng nhập" class="btn">
+                <a href="">Quên mật khẩu?</a>
+                <p class="account-text">Chưa có tài khoản? <a href="#" id="sign-up-btn2">Đăng ký</a></p>
+            </form>
+            <form style="flex-direction: column;" action="" class="sign-up-form">
+                <h2 class="title">Đăng ký</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Nhập tài khoản">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Nhập email hoặc sđt">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Nhập mật khẩu">
+                </div>
+                <input style="border: 2px solid rgb(142, 40, 40);" type="submit" value="Đăng ký" class="btn">
+                <p class="account-text">Đã có tài khoản? <a href="#" id="sign-in-btn2" >Đăng nhập</a></p>
+            </form>
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Bạn đã có tài khoản?</h3>
+                    <button class="btn" id="sign-in-btn" style="border: 2px solid rgb(255, 255, 255);">Đăng nhập</button>
+                </div>
+                <img src="signin.svg" alt="" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Bạn chưa có tài khoản?</h3>
+                    <button class="btn" id="sign-up-btn" style="border: 2px solid rgb(255, 255, 255);">Đăng ký</button>
+                </div>
+                <img src="signup.svg" alt="" class="image">
+            </div>
+        </div>
+    </div>
+    <div style="width: 100%;height: 100px;background-color: rgb(118, 31, 31);color: aliceblue;margin-top: 5px;">
+        <p style="margin-left: 3%;">Dương Vạn Khương</p>
+        <p style="margin-left: 3%;">Gmail: <a href="https://mail.google.com/mail/u/0/#inbox">duongvankhuong197@gmail.com</a></p>
+        </div>    <script>
+        const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const container = document.querySelector(".container");
+const sign_in_btn2 = document.querySelector("#sign-in-btn2");
+const sign_up_btn2 = document.querySelector("#sign-up-btn2");
+
+sign_up_btn.addEventListener("click", () => {
+    container.classList.add("sign-up-mode");
+});
+
+sign_in_btn.addEventListener("click", () => {
+    container.classList.remove("sign-up-mode");
+});
+
+sign_up_btn2.addEventListener("click", () => {
+    container.classList.add("sign-up-mode2");
+});
+sign_in_btn2.addEventListener("click", () => {
+    container.classList.remove("sign-up-mode2");
+});
+    </script>
+</body>
+
+</html>
